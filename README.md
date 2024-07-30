@@ -2,6 +2,9 @@
 
 ## Задание 1
 
+/Безымянный.png
+
+
 #### Сотрудники (Employees):
 
 * идентификатор (id_name): первичный ключ, serial
@@ -43,4 +46,36 @@
 
 * ид должности (id_position): внешний ключ, serial
 * фио (name): varchar(100)
-* оклад (salary) INTEGER,       (salary вместо money)
+* оклад (money) INTEGER
+
+-----
+
+
+structural_units:
+Данные: Информация о структурных подразделениях
+units_id (INT), name (INT)
+
+units:
+Данные: Детали отдельных единиц или членов.
+id (INT), position_id (INT), name (INT).
+
+projects:
+Данные: Информация о проектах.
+id (INT), position_id (INT).
+
+unit_types:
+Данные: Типы подразделений
+id_type (INT), name (TEXT).
+
+position:
+Данные: должности
+id_position (INT), name (INT)
+
+full_address:
+Данные: Адресная информация.
+id_address (INT), id_city (INT), full_address (TEXT)
+
+workers:
+фио (TEXT)? id_name (INT), date (date)
+
+и т.д
