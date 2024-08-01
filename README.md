@@ -2,80 +2,49 @@
 
 ## Задание 1
 
-[таблицы](png/1.png)
+[таблицы](png/2.png)
 
+1. Таблица “дата найма”:
+* id_name
+* date
 
-#### Сотрудники (Employees):
+2. Таблица “подразделения”:
+* id_units
+* id_position
+* id_name
 
-* идентификатор (id_name): первичный ключ, serial
-* фио (name): varchar(100)
-* идентификатор должности (id_position): внешний ключ, integer
-* идентификатор адреса (id_address): внешний ключ, integer
+3. Таблица “структурные подразделения”:
+* id_structural_units
+* id_units
+* id_name
 
+4. Таблица “тип подразделения”:
+* id_type
+* id_units
+* id_name
 
-#### Структурные подразделения (Structural Units):
+5. Таблица “должность”:
+* id_position
+* id_name
 
-* ид подразделения (id_units): первичный ключ, serial
-* фио (name): varchar(100)
+6. Таблица “оклад”:
+* id_position
+* money
+* id_name
 
+7. Таблица "проект":
+* id_projects
+* id_position
+* id_name
 
-#### Должности (Positions):
+8. Таблица "адресс филиала":
+* id_address
+* id_name
 
-* ид должност (id_position): первичный ключ, serial
-* фио (name): varchar(100)
+----
 
+id (projects, structural units, address, type): int (первичный ключ)
+id_name: int (вторичный ключ)
+date: date
+money: numeric
 
-#### Проекты (Projects):
-
-* ид проекта  (id_projects): первичный ключ, serial
-* фио (name): varchar(100)
-
-
-#### Адреса (Unit Address):
-
-* ид адресса (id_full_address): первичный ключ, serial
-* город (city): varchar(100)
-
-
-#### Типы подразделений (Unit Types):
-
-* ид типа подраздления  (id_type): первичный ключ, serial
-* фио (name): varchar(100)
-
-#### Типы подразделений (Unit Types):
-
-* ид должности (id_position): внешний ключ, serial
-* фио (name): varchar(100)
-* оклад (money) INTEGER
-
------
-
-
-structural_units:
-Данные: Информация о структурных подразделениях
-units_id (INT), name (INT)
-
-units:
-Данные: Детали отдельных единиц или членов.
-id (INT), position_id (INT), name (INT).
-
-projects:
-Данные: Информация о проектах.
-id (INT), position_id (INT).
-
-unit_types:
-Данные: Типы подразделений
-id_type (INT), name (TEXT).
-
-position:
-Данные: должности
-id_position (INT), name (INT)
-
-full_address:
-Данные: Адресная информация.
-id_address (INT), id_city (INT), full_address (TEXT)
-
-workers:
-фио (TEXT)? id_name (INT), date (date)
-
-и т.д
