@@ -49,7 +49,10 @@
 ----
 
 id (projects, structural units, address, type): int (первичный ключ)
+
 id_name: int (вторичный ключ)
+
 date: date
+
 money: numeric
 
