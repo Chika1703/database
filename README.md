@@ -57,3 +57,9 @@ id (projects, structural units, address, type): (уникальный)
 date: date
 
 money: numeric
+
+пример с id_name:
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(80),
+);
