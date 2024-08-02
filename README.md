@@ -48,11 +48,9 @@
 
 ----
 
-id (position, units): int (вторичный ключ)
+id (position, units, projects, structural units, address, type): int (вторичный ключ)
 
 id_name: int (первичный ключ)
-
-id (projects, structural units, address, type): (уникальный)
 
 date: date
 
